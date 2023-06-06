@@ -1,0 +1,24 @@
+{
+  "name": "@lotus-ux/tailwind",
+  "version": "0.0.2",
+  "scripts": {
+    "build": "tsup"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "source": "src/index.tsx",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.2.5",
+    "tailwindcss": "3.3.2",
+    "tsconfig": "workspace:*",
+    "tsup": "6.7.0",
+    "typescript": "5.0.4"
+  }
+}
