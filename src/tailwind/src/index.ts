@@ -31,8 +31,6 @@ const lotus = plugin(function ({ addUtilities, config }) {
     .filter(Boolean)
     .concat(defaults) as string[]
 
-  console.log('Loading packages:', pkgs)
-
   if (Array.isArray(content)) {
     content.push(...pkgs)
   } else {
