@@ -12,7 +12,7 @@ import { useToggleState } from 'react-stately'
 const variants = cva(
   [
     'stroke-white',
-    'border',
+    'border-2',
     'border-slate-300',
     'rounded',
     'bg-slate-50',
@@ -35,20 +35,20 @@ const variants = cva(
 type CheckboxProps = AriaCheckboxProps & VariantProps<typeof variants> & {}
 
 const Checkbox = (props: CheckboxProps) => {
-  const { children } = props
+  const { children, error } = props
   const ref = useRef<HTMLInputElement>(null)
   const state = useToggleState(props)
   const { inputProps } = useCheckbox(props, state, ref)
   const { focusProps, isFocusVisible } = useFocusRing()
 
   return (
-    <label className="flex items-center group cursor-pointer space-x-2">
+    <label className="flex items-center group cursor-pointer">
       <VisuallyHidden>
         <input {...mergeProps(inputProps, focusProps)} ref={ref} />
       </VisuallyHidden>
       <div
         aria-hidden="true"
-        className={cn(variants({}))}
+        className={cn(variants({ error }))}
         data-selected={state.isSelected || undefined}
         data-focus-visible={isFocusVisible || undefined}
       >
@@ -65,7 +65,7 @@ const Checkbox = (props: CheckboxProps) => {
           />
         </svg>
       </div>
-      <span className={''}>{children}</span>
+      <span className="ml-2">{children}</span>
     </label>
   )
 }
