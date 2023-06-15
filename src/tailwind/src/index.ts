@@ -1,7 +1,7 @@
 import { dirname, join } from 'path'
 import plugin from 'tailwindcss/plugin'
 
-const packages = ['button', 'input', 'label', 'text-field']
+const packages = ['button', 'checkbox', 'input', 'label', 'text-field']
 const defaults = [
   packages.map((pkg) => `./node_modules/@lotus-ux/${pkg}/**/*.js`),
   packages.map(
