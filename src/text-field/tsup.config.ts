@@ -10,7 +10,7 @@ export default defineConfig({
   format: ['esm', 'cjs'],
   esbuildOptions(options) {
     options.banner = {
-      js: '"use client"'
+      js: '"use client"',
     }
-  }
+  },
 })

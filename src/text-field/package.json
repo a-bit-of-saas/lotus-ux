@@ -17,11 +17,11 @@
     "@lotus-ux/utils": "workspace:*",
     "class-variance-authority": "0.6.0",
     "react-aria": "3.25.0",
-    "tsup": "6.7.0"
+    "tsup": "7.0.0"
   },
   "devDependencies": {
-    "@types/react": "18.2.8",
-    "@types/react-dom": "18.2.4",
+    "@types/react": "18.2.13",
+    "@types/react-dom": "18.2.6",
     "react": "18.2.0",
     "tsconfig": "workspace:*",
     "typescript": "5.1.3"
